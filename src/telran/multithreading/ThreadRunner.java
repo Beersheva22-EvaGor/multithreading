@@ -1,5 +1,6 @@
 package telran.multithreading;
 
+import java.time.Instant;
 import java.util.Random;
 
 public class ThreadRunner extends Thread {
@@ -23,6 +24,7 @@ public class ThreadRunner extends Thread {
 				sleep(rand.nextInt(min, max));
 			} catch (InterruptedException e) {}
 		}
-		winner.setWinnerIndex(index);
+		winner.addWinner(index);
 	}
+	
 }

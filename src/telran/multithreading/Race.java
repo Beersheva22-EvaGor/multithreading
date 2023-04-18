@@ -12,7 +12,7 @@ public class Race {
 		this.distance = distance;
 	}
 
-	public int run() {
+	public String run() {
 		ThreadParams winner = new ThreadParams();
 		System.out.println("Race's started");
 		List<ThreadRunner> list = new ArrayList<>();
@@ -35,7 +35,7 @@ public class Race {
 		threadDispl.interrupt();
 		System.out.println();
 		
-		return winner.getWinnerIndex();
+		return winner.displayResult();
 	}
 
 	private void displayProcessing() {
@@ -51,4 +51,6 @@ public class Race {
 			}
 		} catch (InterruptedException e) {}
 	}
+	
+	
 }
