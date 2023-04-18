@@ -8,8 +8,5 @@ public class ThreadRaceAppl {
 	static final InputOutput IO = new StandardInputOutput();
 	public static void main(String[] args) {
 		ThreadRaceMenu.getMenu().perform(IO);
-		
-
 	}
-
 }
