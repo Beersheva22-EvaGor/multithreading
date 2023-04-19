@@ -24,7 +24,7 @@ public class ThreadRunner extends Thread {
 				sleep(rand.nextInt(min, max));
 			} catch (InterruptedException e) {}
 		}
-		winner.addWinner(index);
+		winner.addWinner(index, Instant.now());
 	}
 	
 }

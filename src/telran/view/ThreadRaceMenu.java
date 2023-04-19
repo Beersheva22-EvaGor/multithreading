@@ -14,7 +14,7 @@ public class ThreadRaceMenu {
 	}
 	
 	private static void start (InputOutput io) {
-		int numThreads = io.readInt("Input number of threads (2-10)", "It should be 2-10", 2, 10);
+		int numThreads = io.readInt("Input number of threads (2-100)", "It should be 2-100", 2, 100);
 		int distance = io.readInt("Input distance (100-1000)", "It should be 100-1000", 100, 1000);
 		Race race = new Race(numThreads, distance);
 		String winners = race.run();
