@@ -15,8 +15,8 @@ public class SenderReceiversAppl {
 		for(int i = 0; i < N_RECEIVERS; i++) {
 			new Receiver(messageBox).start();
 		}
+		Thread.sleep(100);
 		sender.join();
-
 	}
 
 }
