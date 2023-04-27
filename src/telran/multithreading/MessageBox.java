@@ -35,6 +35,19 @@ public class MessageBox {
 		} finally {
 			lock.unlock();
 		}
-
+	}
+	
+	public String get() {
+		lock.lock();
+		try {
+			String res =  message;
+			message = null;
+			if (res != null) {
+				waitingProducer.signal();
+			}
+			return res;
+		} finally {
+			lock.unlock();
+		}
 	}
 }
